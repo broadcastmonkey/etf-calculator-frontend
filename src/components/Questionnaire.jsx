@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Form } from "react-bootstrap";
 import { withRouter } from "react-router";
 import { Questions1, Questions2 } from "../services/mockQuestionnaire";
 import SingleQuestion from "./SingleQuestion";
@@ -13,6 +13,7 @@ class Questionnaire extends Component {
         areAllAnsCheckedInQuestions2: false,
         ansQuestions2: [],
         ptsQuestions2: 0,
+        cash: 0,
     };
     componentDidMount() {
         this.setState({
@@ -71,8 +72,30 @@ class Questionnaire extends Component {
                 <Card.Body>
                     <Card.Title>
                         <b>
+                            <>
+                                <Form.Label htmlFor="inputPassword5">
+                                    Funds you would like to invest expressed in USD
+                                </Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    id="inputPassword5"
+                                    aria-describedby="passwordHelpBlock"
+                                    defaultValue={this.state.cash}
+                                    onChange={this.handleChange}
+                                />
+                                {this.state.cash <= 100 && (
+                                    <Form.Text id="passwordHelpBlock" muted>
+                                        Your investment funds must be at least $100
+                                    </Form.Text>
+                                )}
+                            </>
+                            <br />
+                            <br />
+                            <br />
                             <Button
+                                size="lg"
                                 variant="outline-primary"
+                                disabled={this.state.cash <= 100}
                                 onClick={() => {
                                     this.setState({ currentQuestionType: 2 });
                                 }}
@@ -115,7 +138,12 @@ class Questionnaire extends Component {
                             <Button
                                 variant="outline-primary"
                                 onClick={() => {
-                                    this.props.history.push("/results/" + this.state.ptsQuestions2);
+                                    this.props.history.push(
+                                        "/results/" +
+                                            this.state.ptsQuestions2 +
+                                            "/" +
+                                            this.state.cash,
+                                    );
                                 }}
                             >
                                 Calculate Best ETF for me
@@ -126,6 +154,13 @@ class Questionnaire extends Component {
                 </Card.Body>
             </Card>
         );
+    };
+
+    handleChange = (event) => {
+        // console.log(event.target.value);
+        let cash = parseInt(event.target.value);
+        if (!isNaN(cash)) this.setState({ cash });
+        // console.log(event.target.value);
     };
 
     render() {
@@ -151,7 +186,6 @@ class Questionnaire extends Component {
                     !this.state.areAllAnsA &&
                     this.state.currentQuestionType === 1 &&
                     this.renderGoSomewhereElese()}
-
                 {this.state.currentQuestionType === 2 &&
                     Questions2.map((x) => (
                         <SingleQuestion

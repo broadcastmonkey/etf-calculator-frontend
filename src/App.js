@@ -28,7 +28,7 @@ class App extends Component {
                         {/* <Route path="/register" component={RegisterForm} /> */}
                         <Route path="/not-found" component={NotFound} />{" "}
                         <Route path="/" exact component={LandingPage} />
-                        <Route path="/results/:riskScore" exact component={ResultsPage} />
+                        <Route path="/results/:riskScore/:cash" exact component={ResultsPage} />
                         <Redirect to="/not-found" />
                     </Switch>
                 </main>
