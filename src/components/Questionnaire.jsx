@@ -83,9 +83,10 @@ class Questionnaire extends Component {
                                     defaultValue={this.state.cash}
                                     onChange={this.handleChange}
                                 />
-                                {this.state.cash <= 100 && (
+                                {(this.state.cash <= 100 || this.state.cash > 1000000) && (
                                     <Form.Text id="passwordHelpBlock" muted>
-                                        Your investment funds must be at least $100
+                                        Your investment funds must be at least $100 and lower than
+                                        $1000000
                                     </Form.Text>
                                 )}
                             </>
@@ -95,7 +96,7 @@ class Questionnaire extends Component {
                             <Button
                                 size="lg"
                                 variant="outline-primary"
-                                disabled={this.state.cash <= 100}
+                                disabled={this.state.cash <= 100 || this.state.cash > 1000000}
                                 onClick={() => {
                                     this.setState({ currentQuestionType: 2 });
                                 }}
