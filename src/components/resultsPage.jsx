@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, ProgressBar } from "react-bootstrap";
+import { Card, ProgressBar, Spinner } from "react-bootstrap";
 import socket from "../services/socketService";
 import { Results } from "../services/mockResults";
 
@@ -112,7 +112,14 @@ class ResultsPage extends Component {
                         alt="Logo"
                     />
                 )}
-                ;
+                {!this.state.calculationsFinished && (
+                    <Spinner
+                        animation="border"
+                        variant="info"
+                        className="m-4 text-center"
+                        style={{ width: 250, height: 250 }}
+                    />
+                )}
             </>
         );
     }
