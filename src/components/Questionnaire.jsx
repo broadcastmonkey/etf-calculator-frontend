@@ -74,7 +74,7 @@ class Questionnaire extends Component {
                         <b>
                             <>
                                 <Form.Label htmlFor="inputPassword5">
-                                    Funds you would like to invest expressed in USD
+                                    How much money would you like to invest (USD)?
                                 </Form.Label>
                                 <Form.Control
                                     type="text"
