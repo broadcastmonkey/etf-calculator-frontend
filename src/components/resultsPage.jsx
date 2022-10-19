@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Card, ProgressBar } from "react-bootstrap";
 import socket from "../services/socketService";
+import { Results } from "../services/mockResults";
 
 class ResultsPage extends Component {
     state = {
@@ -35,7 +37,35 @@ class ResultsPage extends Component {
     };
 
     render() {
-        return <div>{this.state.riskScore}</div>;
+        return (
+            <>
+                {" Allocations "}
+                <Card bg="white" text="dark" className="mb-2 mt-2">
+                    <Card.Header>
+                        <h4 style={{ color: "blue" }}>score: {this.state.riskScore}</h4>
+                    </Card.Header>
+                    <Card.Body>
+                        {Results.Allocation.map((x) => {
+                            return (
+                                <>
+                                    {x.name + " : " + x.value}
+                                    <ProgressBar
+                                        min={0}
+                                        max={1}
+                                        now={x.value}
+                                        label={x.name + " : " + x.value}
+                                        striped={true}
+                                        animated={false}
+                                        variant="info"
+                                    ></ProgressBar>
+                                    <hr />
+                                </>
+                            );
+                        })}
+                    </Card.Body>
+                </Card>
+            </>
+        );
     }
 }
 

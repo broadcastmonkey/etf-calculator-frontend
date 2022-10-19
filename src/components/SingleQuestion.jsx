@@ -19,15 +19,15 @@ class SingleQuestion extends Component {
             <>
                 <Card bg="white" text="dark" className="mb-2 mt-2">
                     <Card.Header>
-                        <h2>Question {number}</h2>
-                        {question}
+                        <h4 style={{ color: "blue" }}>Question {number}</h4>
+                        <h3>{question}</h3>
                     </Card.Header>
                     <Card.Body>
                         <div className="d-grid gap-2">
                             {ans.map((x) => {
                                 const badgeContent = x.letter || x.number;
                                 const variant =
-                                    x.number === this.state.checkedNumber ? "primary" : "secondary";
+                                    x.number === this.state.checkedNumber ? "primary" : "light";
                                 return (
                                     <Button
                                         key={x.number}
