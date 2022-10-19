@@ -1,0 +1,210 @@
+[
+    {
+        "number": 1,
+        "question": "How much knowledge do you have of investment markets?",
+        "ans": [
+            {
+                "number": 1,
+                "text": "I don’t follow what goes on in the market. "
+            },
+            {
+                "number": 2,
+                "text": "I sometimes read about the markets and know that returns can vary from year to year. "
+            },
+            {
+                "number": 3,
+                "text": "I read about the markets whenever I get the chance and understand that different sectors have different returns and risk. "
+            }
+        ]
+    },
+    {
+        "number": 2,
+        "question": "What are you currently looking for in an investment? ",
+        "ans": [
+            {
+                "number": 1,
+                "text": "I want a regular income and/or want to protect my capital. "
+            },
+            {
+                "number": 2,
+                "text": "I want a mixture of growth and income from my investment. "
+            },
+            {
+                "number": 3,
+                "text": "I am looking to generate long term growth."
+            }
+        ]
+    },
+    {
+        "number": 3,
+        "question": "How long are you planning to invest the majority of your money for before spending it (including after retirement)? ",
+        "ans": [
+            {
+                "number": 1,
+                "text": "Less than 2 years"
+            },
+            {
+                "number": 2,
+                "text": "2 to 4 years "
+            },
+            {
+                "number": 3,
+                "text": "4 to 7 years "
+            },
+            {
+                "number": 4,
+                "text": "More than 7 years"
+            }
+        ]
+    },
+    {
+        "number": 4,
+        "question": "An investment you have made recently in a share fund has fallen in value. What would you do? ",
+        "ans": [
+            {
+                "number": 1,
+                "text": "Sell the investment immediately so you don’t lose any more money. "
+            },
+            {
+                "number": 2,
+                "text": "Do nothing because you feel that it will rise in value again. "
+            },
+            {
+                "number": 3,
+                "text": "Put in more money now, while values are down. You feel you’ll get a bargain."
+            }
+        ]
+    },
+    {
+        "number": 5,
+        "question": " Given the choice between higher security and higher returns: would you choose security even if this means inflation may erode the purchasing power of your investment? ",
+        "ans": [
+            {
+                "number": 1,
+                "text": "Agree "
+            },
+            {
+                "number": 2,
+                "text": "Not sure"
+            },
+            {
+                "number": 3,
+                "text": "Disagree"
+            }
+        ]
+    },
+    {
+        "number": 6,
+        "question": "When making an investment, return and risk usually go together. For example, investments that produce above average returns have above average risk. How much of the funds you have available for investment would you be willing to place in investments where both returns and risks are expected to be above average (e.g. shares)? ",
+        "ans": [
+            {
+                "number": 1,
+                "text": "None"
+            },
+            {
+                "number": 2,
+                "text": "Up to 35%"
+            },
+            {
+                "number": 3,
+                "text": "35% – 60%"
+            },
+            {
+                "number": 4,
+                "text": "61% – 80%"
+            },
+            {
+                "number": 5,
+                "text": "Over 80%"
+            }
+        ]
+    },
+    {
+        "number": 7,
+        "question": "How often would you be prepared to tolerate a negative return to receive progressively higher returns? ",
+        "ans": [
+            {
+                "number": 1,
+                "text": "Never"
+            },
+            {
+                "number": 2,
+                "text": "One year in ten"
+            },
+            {
+                "number": 3,
+                "text": "One year in seven"
+            },
+            {
+                "number": 4,
+                "text": "One year in four "
+            },
+            {
+                "number": 5,
+                "text": "One year in three"
+            }
+        ]
+    },
+    {
+        "number": 8,
+        "question": "How would you prefer to invest your money to meet your future investment objectives? ",
+        "ans": [
+            {
+                "number": 1,
+                "text": "I prefer to invest my money in a guaranteed arrangement, one where my money is absolutely safe even if this means I earn a lower rate and ignore inflation. "
+            },
+            {
+                "number": 2,
+                "text": "I prefer investments that show steady growth, however I wish to beat inflation so I’m willing to assume some risk. "
+            },
+            {
+                "number": 3,
+                "text": "I prefer a more aggressive mix of investments, some with moderate growth, but mostly those with higher risk and the chance of higher returns."
+            }
+        ]
+    },
+    {
+        "number": 9,
+        "question": "Would you tolerate short term (i.e. 1-2 years) reductions to the value of your investments if there are prospects of stronger returns over the long term? ",
+        "ans": [
+            {
+                "number": 1,
+                "text": "No"
+            },
+            {
+                "number": 2,
+                "text": "Not sure"
+            },
+            {
+                "number": 3,
+                "text": "Yes"
+            }
+        ]
+    },
+    {
+        "number": 10,
+        "question": "What degree of risk have you taken with your financial decisions in the past?",
+        "ans": [
+            {
+                "number": 1,
+                "text": "Very small"
+            },
+            {
+                "number": 2,
+                "text": "Small"
+            },
+            {
+                "number": 3,
+                "text": "Mediumv"
+            },
+            {
+                "number": 4,
+                "text": "Large"
+            },
+            {
+                "number": 5,
+                "text": "Very large"
+            }
+        ]
+    }
+]

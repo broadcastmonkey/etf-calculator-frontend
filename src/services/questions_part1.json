@@ -1,0 +1,34 @@
+[
+    {
+        "number": 1,
+        "question": "GREEN Roboinvestor only invests in ETFs with the highest ESG score: how do think about that",
+        "ans": [
+            {
+                "letter": "A",
+                "number": 1,
+                "text": "That is right up my alley."
+            },
+            {
+                "letter": "B",
+                "number": 2,
+                "text": "I look for the highest returns (green or not), so I am going to look further."
+            }
+        ]
+    },
+    {
+        "number": 2,
+        "question": "GREEN Roboinvestor only invests in ETFs with the highest ESG score, which in some cases have a little higher than average transaction costs or holding costs: what do you think about that?",
+        "ans": [
+            {
+                "letter": "A",
+                "number": 1,
+                "text": "That is OK, I understand the ESG labels require checks and balances and the sorting brings costs"
+            },
+            {
+                "letter": "B",
+                "number": 2,
+                "text": "I look for the lowest costs in order to get a maximum return, so I am going to look further."
+            }
+        ]
+    }
+]

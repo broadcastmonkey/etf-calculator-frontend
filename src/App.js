@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { ToastContainer } from "react-toastify";
+import { Route, Redirect, Switch } from "react-router-dom";
+import NavBar from "./components/navBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Super <code>Chrumka</code>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import logo from "./logo.svg";
+import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
+import NotFound from "./components/notFound";
+
+import LandingPage from "./components/landingPage";
+import ResultsPage from "./components/resultsPage";
+
+class App extends Component {
+    state = {};
+
+    componentDidMount() {}
+    render() {
+        let speedway = "container-fluid";
+
+        return (
+            <React.Fragment>
+                <ToastContainer />
+
+                <main className={speedway}>
+                    <NavBar />{" "}
+                    <Switch>
+                        {/* <Route path="/register" component={RegisterForm} /> */}
+                        <Route path="/not-found" component={NotFound} />{" "}
+                        <Route path="/" exact component={LandingPage} />
+                        <Route path="/results/:riskScore" exact component={ResultsPage} />
+                        <Redirect to="/not-found" />
+                    </Switch>
+                </main>
+            </React.Fragment>
+        );
+    }
 }
 
 export default App;
